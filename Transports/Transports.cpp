@@ -162,9 +162,9 @@ namespace MyTransports {
 
 	float Broom::drivingTime(float distance) {
 
-		distanceReductionFactor_ = distance / 1000;
+		distanceReductionFactor_ = static_cast<uint16_t>(distance / 1000);
 
-		float newDistance = distance * (1.0 - static_cast<float>(distanceReductionFactor_) / 100);
+		float newDistance = static_cast<float>(distance * (1.0 - static_cast<float>(distanceReductionFactor_) / 100));
 		return drivingTime_(newDistance);
 	};//
 	//
@@ -211,7 +211,7 @@ namespace MyTransports {
 	//
 
 	float Eagle::drivingTime(float distance) {
-		float newDistance = distance * (1.0 - static_cast<float>(distanceReductionFactor_) / 100);
+		float newDistance = static_cast<float>(distance * (1.0 - static_cast<float>(distanceReductionFactor_) / 100));
 		return drivingTime_(newDistance);
 	};//
 	//
@@ -238,7 +238,7 @@ namespace MyTransports {
 			distanceReductionFactor_ = 5;
 		};
 
-		float newDistance = distance * (1.0 - static_cast<float>(distanceReductionFactor_) / 100);
+		float newDistance = static_cast<float>(distance * (1.0 - static_cast<float>(distanceReductionFactor_) / 100));
 		return drivingTime_(newDistance);
 	};//
 	//

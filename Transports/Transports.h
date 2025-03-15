@@ -1,6 +1,8 @@
 #pragma once
 #include <iostream>
 
+#pragma warning (disable : 4251 )
+
 #ifdef TRANSPORTS_EXPORTS
 #define EXP __declspec(dllexport)
 #else 

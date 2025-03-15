@@ -75,9 +75,10 @@ namespace MyTransports {
 
             if (counterRegisteredVehicles > 0) {
                 std::cout << "«арегистрированные транспортные средства: ";
-                for (int i{ 0 }; i < counterRegisteredVehicles; i++) {
+                for (int i{ 0 }; i < (counterRegisteredVehicles - 1); i++) {
                     std::cout << arrayTraffic[i]->getName() << "; ";
                 };
+                std::cout << arrayTraffic[counterRegisteredVehicles - 1]->getName();
             };
 
             std::cout << std::endl;

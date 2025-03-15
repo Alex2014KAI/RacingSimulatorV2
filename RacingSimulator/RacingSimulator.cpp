@@ -1,11 +1,6 @@
 #include <iostream>
-#include <../Race/Race.h>
-#include <../Transports/Transports.h>
-
-#pragma warning (disable : 4251 )
-
-
-
+#include "../Race/Race.h"
+#include "../Transports/Transports.h"
 
 int main()
 {
